@@ -34,9 +34,10 @@ public class StartActivity extends AppCompatActivity {
         Log.d("num1" , String.valueOf(num1));
 
         SharedPreferences pref= getSharedPreferences("number2", Context.MODE_PRIVATE);
-        num2 = pref.getInt("NuM2", (int)num2);
+        num2 = pref.getInt("NuM2", 999);
+        Log.d("num2",String.valueOf(num2));
 
-        if (num1 == -999) {
+        if (num2==999) {
             tv.setText("ハイスコアはありません");
             num2 = 9999;
             Log.d("CountTime222", "通過");
@@ -44,7 +45,6 @@ public class StartActivity extends AppCompatActivity {
             Log.d("CountTime", "通過");
             if (num1>0) {
                 if (num1 <= num2) {
-                    Log.d("num2",String.valueOf(num2));
                     num2 = num1;
                     Log.d("num2",String.valueOf(num2));
                 } else {
