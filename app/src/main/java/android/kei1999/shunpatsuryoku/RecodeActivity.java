@@ -30,23 +30,16 @@ public class RecodeActivity extends AppCompatActivity {
 
             if (-num1<50){
                 textView2.setText("判定は..."+"もう少し頑張りましょう！");
-                if(-num1<40){
-                    textView2.setText("判定は..."+"感覚を研ぎ澄ませて！もう少し！");
-                    if(-num1<35){
-                        textView2.setText("判定は..."+"いい感じです。まだいけます。");
-                        if(-num1<30){
-                            textView2.setText("判定は..."+"あとすこしできるはず！");
-                            if(-num1<25){
-                                textView2.setText("判定は..."+"ほんの一瞬を意識して！");
-                                if(-num1<20){
-                                    textView2.setText("判定は..."+"OK");
-                                    if(-num1==0){
-                                        textView2.setText("判定は..."+"あなたにはもう何も言うことはありません。");
-                                    }
-                                }
-                            }
-                        }
-                    }
+                if(-num1<40) {
+                    textView2.setText("判定は..." + "感覚を研ぎ澄ませて！");
+                }else if(-num1<35) {
+                    textView2.setText("判定は..." + "いい感じです。まだいけます。");
+                }else if(-num1<30) {
+                    textView2.setText("判定は..." + "あとすこし！");
+                }else if (-num1 < 25) {
+                    textView2.setText("判定は..." + "OK");
+                }else if (-num1 == 0) {
+                    textView2.setText("判定は..." + "あなたにはもう何も言うことはありません。");
                 }
             }else{
                 textView2.setText("判定は..."+"気が散り過ぎです。努力しましょう。");
